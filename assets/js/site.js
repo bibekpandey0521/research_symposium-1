@@ -89,8 +89,54 @@ function updateCountdowns() {
   }
 }
 
+function initializeFormspreeForms() {
+  const forms = document.querySelectorAll('form[action*="formspree.io"]');
+
+  forms.forEach((form) => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton ? submitButton.textContent : '';
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (!response.ok) {
+          throw new Error('Form submission failed');
+        }
+
+        const successMessage = document.createElement('div');
+        successMessage.className = 'border border-green-200 bg-green-50 p-6 text-center text-green-800';
+        successMessage.setAttribute('role', 'status');
+        successMessage.innerHTML = '<h4 class="font-serif text-2xl mb-2">Thank you for getting in touch.</h4><p>Your request has been received successfully. Our team will contact you shortly.</p>';
+        form.replaceWith(successMessage);
+      } catch (error) {
+        const errorMessage = document.createElement('p');
+        errorMessage.className = 'mt-4 text-center text-sm text-red-600';
+        errorMessage.setAttribute('role', 'alert');
+        errorMessage.textContent = 'We could not send your request right now. Please try again.';
+        form.appendChild(errorMessage);
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      }
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   await loadSharedLayout();
+  initializeFormspreeForms();
 
   if (document.getElementById('countdown-early') || document.getElementById('countdown-regular')) {
     setInterval(updateCountdowns, 1000);
