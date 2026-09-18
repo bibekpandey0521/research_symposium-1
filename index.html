@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Research Symposium 2026 | A Festival of Research</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nssr: {
+              blue: '#0033A0',
+              light: '#E6F0FA',
+              dark: '#001a52',
+              accent: '#d97706'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="antialiased" data-page="home">
+  <div id="site-header"></div>
+
+  <main class="page-shell">
+    <section class="hero-grid relative pt-20 pb-28 overflow-hidden">
+      <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0033A0" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+          <circle cx="80%" cy="20%" r="300" fill="none" stroke="#0033A0" stroke-width="1" />
+          <circle cx="20%" cy="80%" r="400" fill="none" stroke="#0033A0" stroke-width="1" />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7">
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-nssr-dark leading-[1.1] mb-4">National Research Symposium 2026</h1>
+            <p class="text-sm md:text-base font-medium tracking-widest uppercase text-gray-500 mb-6">A Festival of Research</p>
+            <p class="text-xl md:text-2xl font-serif italic text-nssr-blue mb-8">Moving from Isolated Studies to Shared Solutions</p>
+
+            <div class="flex flex-col sm:flex-row gap-8 text-gray-600 mb-10 border-l-2 border-gray-200 pl-6 py-2">
+              <div>
+                <p class="text-xs uppercase tracking-widest font-semibold text-gray-400 mb-1">Date</p>
+                <p class="font-medium text-lg text-nssr-dark">December 5, 2026</p>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-widest font-semibold text-gray-400 mb-1">Location</p>
+                <p class="font-medium text-lg text-nssr-dark">Kathmandu Valley, Nepal</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 lg:gap-6">
+              <a href="registration.html" class="bg-nssr-blue text-white px-6 py-4 font-semibold tracking-wide hover:bg-nssr-dark transition-colors shadow-lg flex items-center gap-2">Register as Attendee</a>
+              <a href="registration.html" class="bg-transparent border border-gray-300 text-nssr-dark px-6 py-4 font-semibold tracking-wide hover:border-nssr-blue hover:text-nssr-blue transition-colors">Submit Abstract</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col justify-center text-center">
+            <div class="space-y-8">
+              <div>
+                <span class="text-xs font-bold text-nssr-blue uppercase tracking-widest block mb-2">Early-Bird Deadline (Upto Nov 1)</span>
+                <div id="countdown-early" class="countdown-box">
+                  <div><span id="early-days" class="font-serif text-4xl md:text-5xl font-bold text-nssr-dark">--</span><span class="text-[10px] uppercase text-gray-500 block font-semibold tracking-wider mt-1">Days</span></div>
+                  <div class="font-serif text-3xl font-light text-gray-300">:</div>
+                  <div><span id="early-hours" class="font-serif text-4xl md:text-5xl font-bold text-nssr-dark">--</span><span class="text-[10px] uppercase text-gray-500 block font-semibold tracking-wider mt-1">Hours</span></div>
+                  <div class="font-serif text-3xl font-light text-gray-300">:</div>
+                  <div><span id="early-mins" class="font-serif text-4xl md:text-5xl font-bold text-nssr-dark">--</span><span class="text-[10px] uppercase text-gray-500 block font-semibold tracking-wider mt-1">Minutes</span></div>
+                  <div class="font-serif text-3xl font-light text-gray-300">:</div>
+                  <div><span id="early-secs" class="font-serif text-4xl md:text-5xl font-bold text-nssr-dark">--</span><span class="text-[10px] uppercase text-gray-500 block font-semibold tracking-wider mt-1">Seconds</span></div>
+                </div>
+              </div>
+
+              <hr class="border-gray-200 w-32 mx-auto" />
+
+              <div>
+                <span class="text-xs font-bold text-nssr-accent uppercase tracking-widest block mb-2">Regular Deadline (Upto Nov 20)</span>
+                <div id="countdown-regular" class="countdown-box">
+                  <div><span id="reg-days" class="font-serif text-4xl md:text-5xl font-bold text-nssr-dark">--</span><span class="text-[10px] uppercase text-gray-500 block font-semibold tracking-wider mt-1">Days</span></div>
+                  <div class="font-serif text-3xl font-light text-gray-300">:</div>
+                  <div><span id="reg-hours" class="font-serif text-4xl md:text-5xl font-bold text-nssr-dark">--</span><span class="text-[10px] uppercase text-gray-500 block font-semibold tracking-wider mt-1">Hours</span></div>
+                  <div class="font-serif text-3xl font-light text-gray-300">:</div>
+                  <div><span id="reg-mins" class="font-serif text-4xl md:text-5xl font-bold text-nssr-dark">--</span><span class="text-[10px] uppercase text-gray-500 block font-semibold tracking-wider mt-1">Minutes</span></div>
+                  <div class="font-serif text-3xl font-light text-gray-300">:</div>
+                  <div><span id="reg-secs" class="font-serif text-4xl md:text-5xl font-bold text-nssr-dark">--</span><span class="text-[10px] uppercase text-gray-500 block font-semibold tracking-wider mt-1">Seconds</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-gray-200 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div class="metric-card"><p class="font-serif text-4xl text-nssr-blue mb-2">200+</p><p class="text-xs text-gray-500 uppercase tracking-widest font-semibold">In-Person Attendees</p></div>
+          <div class="metric-card"><p class="font-serif text-4xl text-nssr-blue mb-2">05</p><p class="text-xs text-gray-500 uppercase tracking-widest font-semibold">Academic Tracks</p></div>
+          <div class="metric-card"><p class="font-serif text-4xl text-nssr-blue mb-2">Yes</p><p class="text-xs text-gray-500 uppercase tracking-widest font-semibold">Publication Opportunity</p></div>
+          <div class="metric-card"><p class="font-serif text-4xl text-nssr-blue mb-2">6+</p><p class="text-xs text-gray-500 uppercase tracking-widest font-semibold">Hours of Session</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="prose prose-lg text-gray-600 max-w-none">
+            <p class="text-2xl font-serif text-nssr-blue leading-snug mb-8 text-center italic">"Welcome to Nepal’s premier student-led research festival. Our core drive is identical: uncovering answers that solve real problems."</p>
+            <p class="mb-6 text-center">Whether you are capturing optical emission spectroscopy data to analyze dielectric barrier discharge plasma systems, evaluating molecular structures, training neural networks, or processing financial indicators from the Nepal Stock Exchange, the fundamental spirit of inquiry connects us all. Each of these diverse methodologies represents a rigorous pursuit of empirical truth, bridging foundational theory with practical application to address complex challenges in physics, chemistry, computation, and economics.</p>
+            <p class="mb-6 text-center"><strong>Moving from Isolated Studies to Shared Solutions</strong> is more than a theme; it is a direct call to action. We are moving away from isolated academic silos to build a shared, multidisciplinary research ecosystem right here in Nepal.</p>
+            <p class="mb-6 text-center">As our flagship public event and the culmination of the NSRF 2026 fellowship cohort, this symposium provides external researchers, university students, and institutional partners an open, juried platform to present original research.</p>
+            <p class="mb-8 text-center">We encourage young researchers from all faculties to step forward, present your findings, engage with senior mentors, and be part of this historic gathering. We invite you to join us on December 5 to build this future together.</p>
+            <div class="text-center"><a href="registration.html" class="bg-nssr-blue text-white px-8 py-3.5 text-sm font-semibold tracking-wide hover:bg-nssr-dark transition-colors shadow-sm">Register as Attendee Now</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

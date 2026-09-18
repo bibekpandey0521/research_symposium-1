@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partners - National Research Symposium 2026</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nssr: {
+              blue: '#0033A0',
+              light: '#E6F0FA',
+              dark: '#001a52',
+              accent: '#d97706'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="antialiased" data-page="partners">
+  <div id="site-header"></div>
+
+  <main class="page-shell">
+    <section class="bg-white py-24 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="font-serif text-4xl md:text-5xl text-nssr-dark mb-6">Partners & Collaborators</h1>
+        <p class="text-lg text-gray-500 max-w-2xl mx-auto font-light">The National Research Symposium is made possible through the generous support and collaboration of Nepal's leading academic institutions and community partners.</p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-[#FAFAFA]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-20">
+          <div class="flex items-center gap-4 mb-12"><span class="h-px flex-1 bg-gray-300"></span><h2 class="font-serif text-2xl text-gray-600 uppercase tracking-widest text-center whitespace-nowrap">Academic Institutions</h2><span class="h-px flex-1 bg-gray-300"></span></div>
+          <div class="bg-white border border-gray-200 py-16 px-8 flex flex-wrap justify-center items-center gap-12 md:gap-20 shadow-sm rounded-sm">
+            <img src="partners/tu_physics.png" alt="TU Physics Logo" class="h-16 md:h-20 w-auto object-contain transition-all duration-300 cursor-pointer hover:scale-105" title="Central Department of Physics, TU" onerror="this.onerror=null; this.src='https://placehold.co/180x80/ffffff/0033A0?text=TU+Physics';">
+            <img src="partners/tu_chemistry.png" alt="TU Chemistry Logo" class="h-16 md:h-20 w-auto object-contain transition-all duration-300 cursor-pointer hover:scale-105" title="Central Department of Chemistry, TU" onerror="this.onerror=null; this.src='https://placehold.co/180x80/ffffff/0033A0?text=TU+Chemistry';">
+            <img src="partners/tu_microbiology.png" alt="TU Microbiology Logo" class="h-16 md:h-20 w-auto object-contain transition-all duration-300 cursor-pointer hover:scale-105" title="Central Department of Microbiology, TU" onerror="this.onerror=null; this.src='https://placehold.co/180x80/ffffff/0033A0?text=TU+Microbio';">
+            <img src="partners/tu_math.png" alt="TU Math Logo" class="h-16 md:h-20 w-auto object-contain transition-all duration-300 cursor-pointer hover:scale-105" title="Central Department of Mathematics, TU" onerror="this.onerror=null; this.src='https://placehold.co/180x80/ffffff/0033A0?text=TU+Math';">
+            
+            <!--   <img src="partners/st_xaviers.png" alt="St. Xavier's Logo" class="h-16 md:h-20 w-auto object-contain transition-all duration-300 cursor-pointer hover:scale-105" title="St. Xavier's College" onerror="this.onerror=null; this.src='https://placehold.co/180x80/ffffff/0033A0?text=St.+Xavier%27s';">
+            <img src="partners/khwopa.png" alt="Khwopa Logo" class="h-16 md:h-20 w-auto object-contain transition-all duration-300 cursor-pointer hover:scale-105" title="Khwopa College of Engineering" onerror="this.onerror=null; this.src='https://placehold.co/180x80/ffffff/0033A0?text=Khwopa';">
+          -->  <img src="partners/ascol.png" alt="ASCOL Logo" class="h-16 md:h-20 w-auto object-contain transition-all duration-300 cursor-pointer hover:scale-105" title="Amrit Science Campus" onerror="this.onerror=null; this.src='https://placehold.co/180x80/ffffff/0033A0?text=ASCOL';">
+
+            <img src="partners/trichandra.png" alt="Tri-Chandra Logo" class="h-16 md:h-20 w-auto object-contain transition-all duration-300 cursor-pointer hover:scale-105" title="Tri-Chandra Multiple Campus" onerror="this.onerror=null; this.src='https://placehold.co/180x80/ffffff/0033A0?text=Tri-Chandra';">
+            <img src="partners/ceda.png" alt="TU Economics Logo" class="h-16 md:h-20 w-auto object-contain transition-all duration-300 cursor-pointer hover:scale-105" title="Central Department of Economics, TU" onerror="this.onerror=null; this.src='https://placehold.co/180x80/ffffff/0033A0?text=TU+Economics';">
+         
+        </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-10"><h3 class="font-serif text-3xl text-nssr-dark mb-4">Become a Corporate or Community Partner</h3><p class="text-gray-600 text-sm leading-relaxed">Join us in shaping the future of Nepal's research ecosystem. Fill out the form below to discuss sponsorship tiers, exhibition spaces, and custom partnership opportunities.</p></div>
+          <div class="bg-white border-t-4 border-nssr-accent p-8 md:p-12 shadow-md rounded-sm">
+            <form action="https://formspree.io/f/mljdeoqy" method="POST" class="space-y-6">
+              <div class="grid md:grid-cols-2 gap-6"><div><label for="partnerOrgName" class="block text-sm font-medium text-gray-700 mb-1">Organization / Company Name <span class="text-red-500">*</span></label><input type="text" id="partnerOrgName" name="Organization Name" required class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:ring-1 focus:ring-nssr-blue focus:border-nssr-blue outline-none transition-colors"></div><div><label for="partnerContactName" class="block text-sm font-medium text-gray-700 mb-1">Contact Person <span class="text-red-500">*</span></label><input type="text" id="partnerContactName" name="Contact Person" required class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:ring-1 focus:ring-nssr-blue focus:border-nssr-blue outline-none transition-colors"></div></div>
+              <div class="grid md:grid-cols-2 gap-6"><div><label for="partnerEmail" class="block text-sm font-medium text-gray-700 mb-1">Email Address <span class="text-red-500">*</span></label><input type="email" id="partnerEmail" name="Email" required class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:ring-1 focus:ring-nssr-blue focus:border-nssr-blue outline-none transition-colors"></div><div><label for="partnerPhone" class="block text-sm font-medium text-gray-700 mb-1">Contact Number <span class="text-red-500">*</span></label><input type="tel" id="partnerPhone" name="Contact Number" required class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:ring-1 focus:ring-nssr-blue focus:border-nssr-blue outline-none transition-colors"></div></div>
+              <div><label for="partnershipType" class="block text-sm font-medium text-gray-700 mb-1">Interested Partnership Type <span class="text-red-500">*</span></label><select id="partnershipType" name="Partnership Type" required class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:ring-1 focus:ring-nssr-blue focus:border-nssr-blue outline-none bg-white transition-colors"><option value="" disabled selected>Select an option</option><option value="Corporate Sponsor">Corporate Sponsor</option><option value="Community Partner">Community Partner</option><option value="Media Partner">Media Partner</option><option value="Academic Institution">Academic Institution</option><option value="Other / General Inquiry">Other / General Inquiry</option></select></div>
+              <div><label for="partnerMessage" class="block text-sm font-medium text-gray-700 mb-1">How would you like to collaborate?</label><textarea id="partnerMessage" name="Message" rows="4" class="w-full px-4 py-2.5 border border-gray-300 rounded-sm focus:ring-1 focus:ring-nssr-blue focus:border-nssr-blue outline-none transition-colors" placeholder="Let us know your ideas for collaboration or sponsorship..."></textarea></div>
+              <div class="text-center pt-4"><button type="submit" class="inline-flex items-center justify-center gap-2 w-full md:w-auto bg-nssr-dark hover:bg-nssr-blue text-white px-10 py-4 font-semibold tracking-wide transition-colors shadow">Submit Partnership Inquiry</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

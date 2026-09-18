@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tracks - National Research Symposium 2026</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nssr: {
+              blue: '#0033A0',
+              light: '#E6F0FA',
+              dark: '#001a52',
+              accent: '#d97706'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="antialiased" data-page="tracks">
+  <div id="site-header"></div>
+
+  <main class="page-shell">
+    <section class="bg-[#FAFAFA] border-b border-gray-200 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="font-serif text-4xl md:text-5xl text-nssr-dark mb-6">Symposium Tracks & Submissions</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg mb-8">We invite researchers, university students, and NSRF Fellows to submit abstracts demonstrating rigorous methodology. Submissions are open for both oral and poster presentations across five multidisciplinary tracks.</p>
+        <a href="registration.html" class="bg-nssr-blue text-white px-8 py-3.5 text-sm font-semibold tracking-wide hover:bg-nssr-dark transition-colors shadow-sm">Register as Attendee</a>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="track-item py-8 md:py-12 flex flex-col md:flex-row gap-6 md:gap-12 items-start transition-colors hover:bg-gray-50 cursor-default">
+          <div class="track-number">01</div>
+          <div><h3 class="font-serif text-2xl text-nssr-dark mb-3">Physics & Materials Science</h3><p class="text-gray-600 leading-relaxed">Astrophysics, Plasma Physics, Biophysics, and Materials Science.</p></div>
+        </div>
+        <div class="track-item py-8 md:py-12 flex flex-col md:flex-row gap-6 md:gap-12 items-start transition-colors hover:bg-gray-50 cursor-default">
+          <div class="track-number">02</div>
+          <div><h3 class="font-serif text-2xl text-nssr-dark mb-3">Chemical & Biological Sciences</h3><p class="text-gray-600 leading-relaxed">Physical Chemistry, Organic Chemistry, Geochemistry, Microbiology, Biotechnology, and Life Sciences.</p></div>
+        </div>
+        <div class="track-item py-8 md:py-12 flex flex-col md:flex-row gap-6 md:gap-12 items-start transition-colors hover:bg-gray-50 cursor-default">
+          <div class="track-number">03</div>
+          <div><h3 class="font-serif text-2xl text-nssr-dark mb-3">Mathematics & Formal Sciences</h3><p class="text-gray-600 leading-relaxed">Pure & Applied Mathematics, Number Theory, Statistics, and Mathematical Modeling.</p></div>
+        </div>
+        <div class="track-item py-8 md:py-12 flex flex-col md:flex-row gap-6 md:gap-12 items-start transition-colors hover:bg-gray-50 cursor-default">
+          <div class="track-number">04</div>
+          <div><h3 class="font-serif text-2xl text-nssr-dark mb-3">Computational Sciences & Technology</h3><p class="text-gray-600 leading-relaxed">Artificial Intelligence, Machine Learning, Computer Science, and Data Analytics.</p></div>
+        </div>
+        <div class="track-item border-y border-gray-300 py-8 md:py-12 flex flex-col md:flex-row gap-6 md:gap-12 items-start transition-colors hover:bg-gray-50 cursor-default">
+          <div class="track-number">05</div>
+          <div><h3 class="font-serif text-2xl text-nssr-dark mb-3">Economics & Quantitative Social Sciences</h3><p class="text-gray-600 leading-relaxed">Econometrics, Financial Modeling, Market Analytics, and Data-Driven Social Research.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-nssr-dark text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16"><h2 class="font-serif text-3xl md:text-4xl mb-4">Awards & Recognition</h2><p class="text-gray-300 text-sm leading-relaxed">Presentations are evaluated independently by expert panels to recognize top-tier academic contributions across all disciplines.</p></div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white/5 border border-white/10 p-8"><h4 class="font-serif text-xl text-nssr-accent mb-3">Sector-Wise Awards</h4><p class="text-sm text-gray-300 leading-relaxed">Dedicated Best Oral and Best Poster awards presented distinctly for each of the 5 academic tracks.</p></div>
+          <div class="bg-white/5 border border-white/10 p-8"><h4 class="font-serif text-xl text-nssr-accent mb-3">Grand Symposium Prize</h4><p class="text-sm text-gray-300 leading-relaxed">One overall prestigious award given for the single most outstanding research presentation across all tracks.</p></div>
+          <div class="bg-white/5 border border-white/10 p-8"><h4 class="font-serif text-xl text-nssr-accent mb-3">Outstanding Fellow</h4><p class="text-sm text-gray-300 leading-relaxed">Special recognition awarded by mentors and the NSSR Research Team for fellowship excellence.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
