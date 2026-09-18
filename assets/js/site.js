@@ -98,6 +98,17 @@ function initializeFormspreeForms() {
 
       const submitButton = form.querySelector('button[type="submit"]');
       const originalButtonText = submitButton ? submitButton.textContent : '';
+      const replyToInput = form.querySelector('[data-reply-to]');
+      const replyToTarget = replyToInput ? document.getElementById(replyToInput.dataset.replyTo) : null;
+      const previousError = form.querySelector('[role="alert"]');
+
+      if (previousError) {
+        previousError.remove();
+      }
+      if (replyToTarget) {
+        replyToTarget.value = replyToInput.value;
+      }
+
       if (submitButton) {
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
@@ -111,7 +122,8 @@ function initializeFormspreeForms() {
         });
 
         if (!response.ok) {
-          throw new Error('Form submission failed');
+          const result = await response.json().catch(() => ({}));
+          throw new Error(result.error || 'We could not send your request right now. Please try again.');
         }
 
         const successMessage = document.createElement('div');
@@ -123,7 +135,7 @@ function initializeFormspreeForms() {
         const errorMessage = document.createElement('p');
         errorMessage.className = 'mt-4 text-center text-sm text-red-600';
         errorMessage.setAttribute('role', 'alert');
-        errorMessage.textContent = 'We could not send your request right now. Please try again.';
+        errorMessage.textContent = error.message;
         form.appendChild(errorMessage);
         if (submitButton) {
           submitButton.disabled = false;
