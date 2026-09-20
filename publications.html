@@ -28,7 +28,47 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body class="antialiased" data-page="publications">
-  <div id="site-header"></div>
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20 gap-4">
+        <a href="index.html" class="flex-shrink-0 flex items-center gap-2 md:gap-3">
+          <img src="logos/nssr_header_logo.png" alt="NSSR Logo" class="h-9 md:h-11 w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/44x44/0033A0/ffffff?text=NSSR';" />
+          <div class="flex flex-col min-w-0">
+            <span class="logo-text font-bold text-[12px] sm:text-sm md:text-base lg:text-lg text-nssr-dark leading-tight tracking-tight truncate">National Research Symposium 2026</span>
+            <span class="text-[8px] md:text-[10px] text-gray-500 font-semibold uppercase tracking-widest hidden sm:block">A Festival of Research</span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex space-x-6 xl:space-x-10 text-sm font-medium tracking-wide text-gray-600 whitespace-nowrap">
+          <a href="index.html" data-page="home" class="nav-link hover:text-nssr-blue transition-colors hover-underline-animation">Home</a>
+          <a href="about.html" data-page="about" class="nav-link hover:text-nssr-blue transition-colors hover-underline-animation">About</a>
+          <a href="tracks.html" data-page="tracks" class="nav-link hover:text-nssr-blue transition-colors hover-underline-animation">Tracks</a>
+          <a href="schedule.html" data-page="schedule" class="nav-link hover:text-nssr-blue transition-colors hover-underline-animation">Schedule</a>
+          <a href="partners.html" data-page="partners" class="nav-link hover:text-nssr-blue transition-colors hover-underline-animation">Partners</a>
+          <a href="publications.html" data-page="publications" class="nav-link hover:text-nssr-blue transition-colors hover-underline-animation">Publications</a>
+        </nav>
+
+        <div class="flex items-center gap-2 lg:gap-4 flex-shrink-0">
+          <a href="stalls.html" class="hidden lg:inline-flex bg-white text-nssr-dark border border-gray-200 px-4 py-2 text-sm font-semibold tracking-wide hover:bg-gray-50 transition-colors shadow-sm">Book a Stall</a>
+          <a href="registration.html" class="hidden sm:inline-flex bg-nssr-blue text-white px-5 py-2 text-sm font-semibold tracking-wide hover:bg-nssr-dark transition-colors shadow-sm">Register</a>
+          <button id="mobile-menu-btn" class="lg:hidden text-gray-600 hover:text-nssr-blue p-1" aria-label="Toggle menu">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="lg:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-4 shadow-lg absolute w-full">
+      <a href="index.html" data-page="home" class="block w-full text-left text-gray-600 hover:text-nssr-blue font-medium py-2 border-b border-gray-50">Home</a>
+      <a href="about.html" data-page="about" class="block w-full text-left text-gray-600 hover:text-nssr-blue font-medium py-2 border-b border-gray-50">About</a>
+      <a href="tracks.html" data-page="tracks" class="block w-full text-left text-gray-600 hover:text-nssr-blue font-medium py-2 border-b border-gray-50">Tracks</a>
+      <a href="schedule.html" data-page="schedule" class="block w-full text-left text-gray-600 hover:text-nssr-blue font-medium py-2 border-b border-gray-50">Schedule</a>
+      <a href="registration.html" data-page="registration" class="block w-full text-left text-gray-600 hover:text-nssr-blue font-medium py-2 border-b border-gray-50">Fees &amp; Registration</a>
+      <a href="stalls.html" data-page="stalls" class="block w-full text-left text-nssr-accent font-medium py-2 border-b border-gray-50">Book a Stall</a>
+      <a href="partners.html" data-page="partners" class="block w-full text-left text-gray-600 hover:text-nssr-blue font-medium py-2 border-b border-gray-50">Partners</a>
+      <a href="publications.html" data-page="publications" class="block w-full text-left text-nssr-blue font-bold py-2">Publications</a>
+    </div>
+  </header>
 
   <main class="page-shell">
     <section class="relative bg-white py-24 border-b border-gray-200 overflow-hidden">
