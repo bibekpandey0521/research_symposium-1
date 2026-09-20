@@ -71,8 +71,8 @@
   </header>
 
   <main class="page-shell">
-    <section class="bg-[#FAFAFA] border-b border-gray-200 py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="hero-grid relative pt-20 pb-28 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h1 class="font-serif text-4xl md:text-5xl text-nssr-dark mb-6">Symposium Tracks & Submissions</h1>
         <p class="text-gray-600 max-w-2xl mx-auto text-lg mb-8">We invite researchers, university students, and NSRF Fellows to submit abstracts demonstrating rigorous methodology. Submissions are open for both oral and poster presentations across five multidisciplinary tracks.</p>
         <a href="registration.html" class="bg-nssr-blue text-white px-8 py-3.5 text-sm font-semibold tracking-wide hover:bg-nssr-dark transition-colors shadow-sm">Register as Attendee</a>
@@ -141,19 +141,57 @@
       </div>
     </section>
 
-    <section class="py-24 bg-nssr-dark text-white">
+    <section class="py-24 bg-gradient-to-br from-[#F8FAFF] via-[#EAF2FD] to-[#FDF3E7]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-16"><h2 class="font-serif text-3xl md:text-4xl mb-4">Awards & Recognition</h2><p class="text-gray-300 text-sm leading-relaxed">Presentations are evaluated independently by expert panels to recognize top-tier academic contributions across all disciplines.</p></div>
+        <div class="max-w-3xl mx-auto text-center mb-16"><h2 class="font-serif text-3xl md:text-4xl text-nssr-dark mb-4">Awards & Recognition</h2><p class="text-gray-600 text-sm leading-relaxed">Presentations are evaluated independently by expert panels to recognize top-tier academic contributions across all disciplines.</p></div>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white/5 border border-white/10 p-8"><h4 class="font-serif text-xl text-nssr-accent mb-3">Sector-Wise Awards</h4><p class="text-sm text-gray-300 leading-relaxed">Dedicated Best Oral and Best Poster awards presented distinctly for each of the 5 academic tracks.</p></div>
-          <div class="bg-white/5 border border-white/10 p-8"><h4 class="font-serif text-xl text-nssr-accent mb-3">Grand Symposium Prize</h4><p class="text-sm text-gray-300 leading-relaxed">One overall prestigious award given for the single most outstanding research presentation across all tracks.</p></div>
-          <div class="bg-white/5 border border-white/10 p-8"><h4 class="font-serif text-xl text-nssr-accent mb-3">Outstanding Fellow</h4><p class="text-sm text-gray-300 leading-relaxed">Special recognition awarded by mentors and the NSSR Research Team for fellowship excellence.</p></div>
+          <div class="bg-white border border-gray-100 p-8 shadow-sm hover:shadow-md transition-shadow"><h4 class="font-serif text-xl text-nssr-accent mb-3">Sector-Wise Awards</h4><p class="text-sm text-gray-600 leading-relaxed">Dedicated Best Oral and Best Poster awards presented distinctly for each of the 5 academic tracks.</p></div>
+          <div class="bg-white border border-gray-100 p-8 shadow-sm hover:shadow-md transition-shadow"><h4 class="font-serif text-xl text-nssr-accent mb-3">Grand Symposium Prize</h4><p class="text-sm text-gray-600 leading-relaxed">One overall prestigious award given for the single most outstanding research presentation across all tracks.</p></div>
+          <div class="bg-white border border-gray-100 p-8 shadow-sm hover:shadow-md transition-shadow"><h4 class="font-serif text-xl text-nssr-accent mb-3">Outstanding Fellow</h4><p class="text-sm text-gray-600 leading-relaxed">Special recognition awarded by mentors and the NSSR Research Team for fellowship excellence.</p></div>
         </div>
       </div>
     </section>
   </main>
 
-  <div id="site-footer"></div>
+  <footer class="footer-shell hero-grid relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid md:grid-cols-12 gap-10 lg:gap-16 mb-12">
+        <div class="md:col-span-4 flex flex-col items-start">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="logos/nssr_header_logo.png" alt="NSSR Logo" class="h-[48px] w-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/44x44/0033A0/ffffff?text=NSSR';" />
+            <div class="flex flex-col">
+              <span class="font-serif font-bold text-base text-nssr-dark leading-tight tracking-tight">National Research Symposium 2026</span>
+              <span class="text-[10px] text-gray-500 font-semibold uppercase tracking-widest">A Festival of Research</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-6">Building a genuine, equitable research culture among Nepal's student community.</p>
+        </div>
+
+        <div class="md:col-span-5">
+          <h4 class="font-serif font-bold text-nssr-dark mb-5 text-lg">Contact Us</h4>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li><strong class="text-nssr-dark">Official Email:</strong> <a href="mailto:nsrf@nssrnepal.org" class="text-nssr-blue hover:underline">nsrf@nssrnepal.org</a></li>
+            <li><strong class="text-nssr-dark">Numbers:</strong> +977 9826716653 / 9843697197</li>
+            <li><strong class="text-nssr-dark">Location:</strong> Baneshwor, Kathmandu</li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="font-serif font-bold text-nssr-dark mb-5 text-lg">Quick Links</h4>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li><a href="https://www.nssrnepal.org" target="_blank" class="hover:text-nssr-blue hover-underline-animation">Official NSSR Website</a></li>
+            <li><a href="registration.html" class="hover:text-nssr-blue hover-underline-animation">Fees &amp; Registration</a></li>
+            <li><a href="stalls.html" class="hover:text-nssr-blue hover-underline-animation">Book a Stall</a></li>
+            <li><a href="tracks.html" class="hover:text-nssr-blue hover-underline-animation">Symposium Tracks</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-200 pt-8 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Nepalese Society of Student Researchers (NSSR). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="assets/js/site.js"></script>
 </body>
