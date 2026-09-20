@@ -6,35 +6,31 @@ function setActiveNav(pageId) {
     button.classList.toggle('active-nav', active);
     button.classList.toggle('text-gray-600', !active);
   });
+
+  const mobileLinks = document.querySelectorAll('#mobile-menu a[data-page]');
+  mobileLinks.forEach((link) => {
+    const active = link.dataset.page === pageId;
+    link.classList.toggle('text-nssr-blue', active);
+    link.classList.toggle('font-bold', active);
+    link.classList.toggle('text-gray-600', !active);
+    link.classList.toggle('text-nssr-accent', !active && link.dataset.page === 'stalls');
+  });
 }
 
 function toggleMobileMenu() {
   const menu = document.getElementById('mobile-menu');
   if (!menu) return;
-  menu.classList.toggle('hidden');
+  menu.classList.toggle('open');
 }
 
 async function loadSharedLayout() {
-  const headerHost = document.getElementById('site-header');
   const footerHost = document.getElementById('site-footer');
-
-  if (headerHost) {
-    const headerResponse = await fetch('assets/includes/header.html');
-    if (headerResponse.ok) {
-      headerHost.innerHTML = await headerResponse.text();
-    }
-  }
 
   if (footerHost) {
     const footerResponse = await fetch('assets/includes/footer.html');
     if (footerResponse.ok) {
       footerHost.innerHTML = await footerResponse.text();
     }
-  }
-
-  const currentPage = document.body.dataset.page;
-  if (currentPage) {
-    setActiveNav(currentPage);
   }
 
   const menuButton = document.getElementById('mobile-menu-btn');
@@ -46,8 +42,8 @@ async function loadSharedLayout() {
   mobileLinks.forEach((link) => {
     link.addEventListener('click', () => {
       const menu = document.getElementById('mobile-menu');
-      if (menu && !menu.classList.contains('hidden')) {
-        menu.classList.add('hidden');
+      if (menu && menu.classList.contains('open')) {
+        menu.classList.remove('open');
       }
     });
   });
@@ -146,8 +142,13 @@ function initializeFormspreeForms() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-  await loadSharedLayout();
+document.addEventListener('DOMContentLoaded', () => {
+  const currentPage = document.body.dataset.page;
+  if (currentPage) {
+    setActiveNav(currentPage);
+  }
+
+  loadSharedLayout();
   initializeFormspreeForms();
 
   if (document.getElementById('countdown-early') || document.getElementById('countdown-regular')) {
